@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^1.17.0",
+    "marked": "^18.0.4",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
