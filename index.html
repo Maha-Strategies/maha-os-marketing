@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maha OS | Sovereign Ecosystem</title>
+    <meta name="description" content="Take back control of your health. A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.">
+    
+    <link rel="canonical" href="https://maha-os.com/" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maha-os.com/">
+    <meta property="og:title" content="Maha OS | Sovereign Ecosystem">
+    <meta property="og:description" content="A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.">
+    <meta property="og:image" content="https://maha-os.com/og-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://maha-os.com/">
+    <meta name="twitter:title" content="Maha OS | Sovereign Ecosystem">
+    <meta name="twitter:description" content="A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.">
+    <meta name="twitter:image" content="https://maha-os.com/og-image.jpg">
+    <meta name="twitter:creator" content="@mayonemaha">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Maha OS",
+      "operatingSystem": "Android, Web Application",
+      "applicationCategory": "HealthAndFitnessApplication",
+      "description": "A decentralized ecosystem designed to help users eliminate industrial toxins, optimize metabolism, and utilize on-device AI without telemetry tracking.",
+      "author": {
+        "@type": "Organization",
+        "name": "Maha Strategies LLC"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'maha-gold': '#D4AF37',
+                        'maha-rust': '#B7410E',
+                        'maha-dark': '#0A0A0A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-maha-dark text-stone-300 font-sans antialiased min-h-screen flex flex-col selection:bg-maha-gold selection:text-black">
+    
+    <header class="sticky top-0 z-50 border-b border-stone-800 bg-maha-dark/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i data-lucide="hexagon" class="w-7 h-7 text-maha-gold"></i>
+                <span class="font-black text-2xl tracking-tight text-stone-100">Maha OS</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-mono uppercase tracking-widest text-stone-400">
+                <a href="#modules" class="hover:text-maha-gold transition-colors">Modules</a>
+                <a href="#pricing" class="hover:text-maha-gold transition-colors">The Architect Tier</a>
+                <a href="https://blog.maha-os.com" class="hover:text-maha-gold transition-colors">Blog</a>
+            </nav>
+
+            <div class="text-xs font-mono font-medium text-maha-gold bg-maha-gold/10 px-4 py-2 rounded-sm border border-maha-gold/20 flex items-center gap-2 uppercase tracking-wide">
+                <div class="w-2 h-2 rounded-full bg-maha-gold animate-pulse"></div>
+                v1.0 Live
+            </div>
+        </div>
+    </header>
+
+    <main class="relative flex-grow flex items-center px-6 py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="flex flex-col items-start text-left space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm border border-stone-700 bg-stone-800/50 text-stone-300 text-xs font-mono uppercase tracking-wider">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-maha-rust"></i>
+                    Sovereign Ecosystem Initialized
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.05]">
+                    Your Body is a <br>
+                    <span class="text-maha-gold">Sovereign State.</span><br>
+                    Protect it.
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-stone-400 max-w-xl leading-relaxed">
+                    Maha OS is a decentralized ecosystem designed to help you eliminate industrial toxins, optimize your metabolism, and find your tribe—all without being tracked by the algorithms that want you sick.
+                </p>
+                
+                <div class="flex flex-col gap-6 w-full pt-4">
+                    
+                    <p class="text-[10px] font-mono text-stone-500 uppercase tracking-widest mb-[-12px]">
+                        Zero-Payload Architecture. 100% Local Processing. 
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 w-full">
+                        <a href="https://play.google.com/store/apps/details?id=com.maha.os" class="group bg-maha-gold text-black font-bold px-6 py-4 rounded-sm flex items-center justify-center gap-3 hover:bg-white transition-all duration-300 shadow-lg shadow-maha-gold/20 uppercase tracking-wide text-sm flex-grow">
+                            <i data-lucide="smartphone" class="w-5 h-5"></i>
+                            Initialize Local Node (Android)
+                        </a>
+                        <a href="https://app.maha-os.com" class="group bg-stone-900 border border-stone-700 text-stone-200 font-bold px-6 py-4 rounded-sm flex items-center justify-center gap-3 hover:border-stone-500 hover:text-white transition-all duration-300 uppercase tracking-wide text-sm whitespace-nowrap">
+                            <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                            Web Dashboard
+                        </a>
+                    </div>
+                
+                    <div class="border border-stone-800 bg-stone-900/50 p-5 rounded-sm relative overflow-hidden group hover:border-stone-700 transition-colors w-full lg:max-w-md">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-2 h-2 rounded-full bg-maha-rust animate-pulse"></div>
+                            <span class="text-xs font-mono text-stone-300 uppercase tracking-widest">iOS Phantom Node</span>
+                        </div>
+                        <p class="text-xs text-stone-500 mb-4 leading-relaxed font-mono">
+                            Apple enforces a walled garden. Maha OS iOS bypass is currently in development. Submit your email to request initialization for the iOS Vanguard.
+                        </p>
+                        
+                        <form id="ios-waitlist-form" class="flex flex-col sm:flex-row gap-2 relative z-10">
+                            <input type="email" id="waitlist-email" aria-label="Email address for iOS vanguard waitlist" required placeholder="Enter transmission address" class="flex-grow bg-black border border-stone-700 text-stone-300 px-4 py-2 text-sm focus:outline-none focus:border-maha-gold transition-colors font-mono placeholder:text-stone-700">
+                            <button type="submit" id="waitlist-submit" class="bg-stone-800 text-maha-gold border border-stone-700 px-6 py-2 text-sm font-bold uppercase tracking-wide hover:bg-maha-gold hover:text-black transition-colors whitespace-nowrap">
+                                Request
+                            </button>
+                        </form>
+                        <p id="waitlist-status" class="text-[10px] font-mono mt-3 hidden uppercase tracking-widest"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="relative w-full aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border border-stone-800 group">
+                <div class="absolute inset-0 bg-maha-gold/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+    
+                <video 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    aria-label="Abstract background animation of the Sovereign Ecosystem"
+                    poster="poster-image.jpg"
+                    class="object-cover w-full h-full opacity-80 grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                >
+                    <source src="hero-sovereign2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-maha-dark via-transparent to-transparent z-20"></div>
+            </div>
+            
+        </div>
+    </main>
+
+    <section id="modules" class="bg-stone-950 py-24 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">Ecosystem Modules</h2>
+                <p class="text-stone-500 font-mono text-sm uppercase tracking-widest">Biological, Cognitive & Social Nodes</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden group hover:border-stone-600 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=600" alt="Food Label Scanner" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="scan-line" class="w-6 h-6 text-maha-gold"></i>
+                            <h3 class="text-xl font-bold text-white">Kinetic Scanner</h3>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">Instantly identify "The Hateful Eight" seed oils and hidden refined sugars. A high-speed cognitive circuit breaker for the modern grocery store.</p>
+                    </div>
+                </div>
+
+                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden group hover:border-stone-600 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=600" alt="Biohacking Data" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="activity" class="w-6 h-6 text-maha-gold"></i>
+                            <h3 class="text-xl font-bold text-white">Biometric Ledger</h3>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">Establish your "Unbreakable Baseline." Correlate your HRV, Glucose, and resting heart rate locally, without sending telemetry to the cloud.</p>
+                    </div>
+                </div>
+
+                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden group hover:border-maha-rust transition-colors duration-300 flex flex-col">
+                    <div class="h-48 w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600" alt="The Agentic Core" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80">
+                        <div class="absolute inset-0 bg-maha-rust/10 mix-blend-overlay"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="cpu" class="w-6 h-6 text-maha-rust"></i>
+                            <h3 class="text-xl font-bold text-white">The Agentic Core</h3>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            A live, voice-to-voice OS defense grid. When biometric distress or algorithmic trances are detected, the Kinetic Circuit Breaker physically severs device navigation. You must negotiate your unlock in real-time via parasympathetic voice resets.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden group hover:border-stone-600 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600" alt="Protocol Adherence" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="clipboard-check" class="w-6 h-6 text-maha-gold"></i>
+                            <h3 class="text-xl font-bold text-white">The Protocol</h3>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">Log and track your biological sovereignty routines. Execute daily directives for metabolic health, circadian alignment, and cognitive focus.</p>
+                    </div>
+                </div>
+
+                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden group hover:border-stone-600 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80&w=600" alt="Fireteam Community" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="users" class="w-6 h-6 text-maha-gold"></i>
+                            <h3 class="text-xl font-bold text-white">Fireteam Finder</h3>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">Don't go solo. Connect with local "Sovereign Cells"—vetted community members who prioritize metabolic health and physical resilience.</p>
+                    </div>
+                </div>
+
+                <div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden group hover:border-stone-600 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 w-full relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt="Zero-Payload Privacy" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="shield" class="w-6 h-6 text-maha-gold"></i>
+                            <h3 class="text-xl font-bold text-white">Zero-Payload Privacy</h3>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">Your data stays on your device. All biometric and telemetry processing is ephemeral. We refuse to sell your biology to advertising networks.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-black relative border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">Initialize Your Node</h2>
+                <p class="text-stone-500 font-mono text-sm uppercase tracking-widest">Select your level of sovereignty</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+                
+                <div class="bg-stone-900/50 border border-stone-800 p-8 rounded-xl flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-2">Base Node</h3>
+                    <div class="text-4xl font-black text-stone-300 mb-6">Free</div>
+                    <p class="text-stone-400 text-sm mb-8 leading-relaxed">The foundational toolkit to begin your exit from the algorithmic matrix and protect your metabolic baseline.</p>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <i data-lucide="check" class="w-5 h-5 text-stone-500 shrink-0"></i>
+                            Local Kinetic Lockdowns
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <i data-lucide="check" class="w-5 h-5 text-stone-500 shrink-0"></i>
+                            2 Live Voice Negotiations / Day
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-300">
+                            <i data-lucide="check" class="w-5 h-5 text-stone-500 shrink-0"></i>
+                            Standard Biometric Ledger
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 border border-stone-700 text-stone-300 font-bold uppercase tracking-wide text-sm hover:bg-stone-800 transition-colors rounded-sm">Current Level</button>
+                </div>
+
+                <div class="bg-maha-dark border-2 border-maha-gold p-8 rounded-xl flex flex-col relative transform md:-translate-y-4 shadow-2xl shadow-maha-gold/10">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-maha-gold text-black text-[10px] font-mono font-bold uppercase tracking-widest px-4 py-1 rounded-sm whitespace-nowrap">
+                        Maximum Sovereignty
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2">The Architect Tier</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-4xl font-black text-maha-gold">$19.99</span>
+                        <span class="text-stone-500 text-sm font-mono mb-1">/mo</span>
+                    </div>
+                    <p class="text-stone-400 text-sm mb-8 leading-relaxed">Full access to the cognitive circuit breakers, advanced AI audits, and strategic frameworks for total biological control.</p>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-stone-200">
+                            <i data-lucide="check" class="w-5 h-5 text-maha-gold shrink-0"></i>
+                            <span><strong>Unlimited Compute:</strong> Zero API limits on live voice-to-voice negotiations with the Core.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-200">
+                            <i data-lucide="check" class="w-5 h-5 text-maha-gold shrink-0"></i>
+                            <span><strong>Deep Integration:</strong> Advanced correlations between HRV, glucose, and focus states.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-200">
+                            <i data-lucide="check" class="w-5 h-5 text-maha-gold shrink-0"></i>
+                            <span><strong>The Blueprint:</strong> Direct integration with core physical and mental protocols.</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-maha-gold text-black font-bold uppercase tracking-wide text-sm hover:bg-white transition-colors rounded-sm shadow-lg shadow-maha-gold/20 flex justify-center items-center gap-2">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
+                        Upgrade to Architect
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-b from-maha-rust/20 to-black border-2 border-maha-rust p-8 rounded-xl flex flex-col relative shadow-2xl shadow-maha-rust/10 transform md:-translate-y-2">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-maha-rust text-white text-[10px] font-mono font-bold uppercase tracking-widest px-4 py-1 rounded-sm whitespace-nowrap">
+                        Vanguard Only &bull; Limited to 500
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2">Founding Node</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-4xl font-black text-maha-rust">$199</span>
+                        <span class="text-stone-500 text-sm font-mono mb-1">/lifetime</span>
+                    </div>
+                    <p class="text-stone-400 text-sm mb-8 leading-relaxed">
+                        Secure permanent, lifetime access to the Sovereign Ecosystem and all future Architect-level modules before mass deployment.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-stone-200">
+                            <i data-lucide="check" class="w-5 h-5 text-maha-rust shrink-0"></i>
+                            <span><strong>Lifetime Voice Compute:</strong> Permanent access to the Agentic Core with zero recurring API fees.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-200">
+                            <i data-lucide="check" class="w-5 h-5 text-maha-rust shrink-0"></i>
+                            <span><strong>Direct Comms:</strong> Priority feedback channel directly to the founder.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-stone-200">
+                            <i data-lucide="check" class="w-5 h-5 text-maha-rust shrink-0"></i>
+                            <span><strong>Alpha Protocol:</strong> First access to unreleased strategic cognitive modules.</span>
+                        </li>
+                    </ul>
+
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-2xl font-bold text-white mb-8 text-center">Clearance Protocols (FAQ)</h3>
+                <div class="space-y-4">
+                    <details class="group bg-stone-900 border border-stone-800 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer text-stone-200">
+                            Do you store my health data?
+                            <span class="transition group-open:rotate-180">
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-maha-gold"></i>
+                            </span>
+                        </summary>
+                        <p class="text-stone-400 mt-4 text-sm leading-relaxed">
+                            Negative. Maha OS operates on a Zero-Payload Architecture. All biometric inputs, metabolic logs, and cognitive tracking remain entirely on your local device. We cannot sell what we do not possess.
+                        </p>
+                    </details>
+                    <details class="group bg-stone-900 border border-stone-800 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer text-stone-200">
+                            How do I cancel the Architect Tier?
+                            <span class="transition group-open:rotate-180">
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-maha-gold"></i>
+                            </span>
+                        </summary>
+                        <p class="text-stone-400 mt-4 text-sm leading-relaxed">
+                            Sovereign users can disconnect their node at any time. You can manage your subscription directly through the Web Dashboard or your App Store settings with zero friction or exit barriers.
+                        </p>
+                    </details>
+                    <details class="group bg-stone-900 border border-stone-800 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer text-stone-200">
+                            When will the iOS Vanguard launch?
+                            <span class="transition group-open:rotate-180">
+                                <i data-lucide="chevron-down" class="w-5 h-5 text-maha-gold"></i>
+                            </span>
+                        </summary>
+                        <p class="text-stone-400 mt-4 text-sm leading-relaxed">
+                            Architect Tier members receive priority beta access as soon as we breach the walled garden. Standard waitlist members will be notified in subsequent deployment waves.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-stone-900 bg-black">
+        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-sm font-mono text-stone-600 uppercase tracking-widest">
+                <i data-lucide="hexagon" class="w-4 h-4 text-maha-gold"></i>
+                &copy; 2026 Maha Strategies LLC
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 text-sm font-mono uppercase tracking-widest">
+                <a href="https://blog.maha-os.com" class="text-stone-600 hover:text-maha-gold transition-colors">Blog</a>
+                <a href="#" class="text-stone-600 hover:text-maha-gold transition-colors">The Maha Principle</a>
+                <a href="#" class="text-stone-600 hover:text-maha-gold transition-colors">Join Community</a>
+                <a href="#" class="text-stone-600 hover:text-maha-gold transition-colors">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.getElementById('ios-waitlist-form').addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+        
+            const emailInput = document.getElementById('waitlist-email');
+            const submitBtn = document.getElementById('waitlist-submit');
+            const statusText = document.getElementById('waitlist-status');
+        
+            const email = emailInput.value;
+        
+            submitBtn.innerText = 'WAIT...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50');
+            statusText.classList.remove('hidden');
+            statusText.classList.remove('text-maha-gold', 'text-maha-rust');
+            statusText.classList.add('text-stone-500');
+            statusText.innerText = '[SYSTEM INITIALIZING] Attempting connection...';
+
+            try {
+                const supabaseUrl = 'https://uhwuullakihgszxhiygz.supabase.co';
+                const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVod3V1bGxha2loZ3N6eGhpeWd6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3MTUzODksImV4cCI6MjA4ODI5MTM4OX0.XIM8TVpajmdm2Vv4UGmkgSiXjgK1j7C_ZWCoQcjOpFQ';
+            
+                const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+                const { data, error } = await supabase
+                    .from('ios_vanguard_waitlist')
+                    .insert([{ email: email }]);
+
+                if (error) {
+                    console.error("Supabase Rejection:", error);
+                    statusText.innerText = '[SYSTEM ERROR] Data rejected. You may already be initialized.';
+                    statusText.classList.remove('text-stone-500');
+                    statusText.classList.add('text-maha-rust');
+                
+                    submitBtn.innerText = 'RETRY';
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-50');
+                } else {
+                    statusText.innerText = '[NODE SECURED] You are registered on the iOS Vanguard list.';
+                    statusText.classList.remove('text-stone-500');
+                    statusText.classList.add('text-maha-gold');
+                
+                    emailInput.value = '';
+                    submitBtn.innerText = 'SECURED';
+                }
+            } catch (fatalError) {
+                console.error("Fatal Architecture Error:", fatalError);
+                statusText.innerText = '[FATAL ERROR] Connection blocked by browser shields. Disable to join Vanguard.';
+                statusText.classList.remove('text-stone-500');
+                statusText.classList.add('text-maha-rust');
+            
+                submitBtn.innerText = 'SYSTEM HALT';
+            }
+        });
+    </script>
+</body>
+</html>
