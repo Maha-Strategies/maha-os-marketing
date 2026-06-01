@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 
 // Dynamically import widgets to ensure they are only client-loaded when requested by the frontmatter
-const SovereigntyPledge = dynamic(() => import('../../../components/widgets/SovereigntyPledge'), {
+const SovereigntyPledge = dynamic(() => import('@/components/widgets/SovereigntyPledge'), {
   loading: () => (
     <div className="p-6 border border-stone-800 bg-[#121212] rounded-lg animate-pulse h-64 mt-12 flex items-center justify-center">
       <span className="text-stone-600 font-mono text-sm">Initializing Secure Enclave...</span>
@@ -58,21 +58,11 @@ export default async function BlogPost({ params }: Props) {
     switch (widgetName) {
       case 'manifesto-pledge':
         return <SovereigntyPledge />;
-      // Future widgets go here:
-      // case 'local-compute-benchmark': return <NpuBenchmark />;
-      // case 'mcp-agent-simulator': return <McpTerminal />;
-      // case 'telemetry-audit-cta': return <TelemetryAudit />;
-      default:
-        return null;
-    }
-  };
-
-  const renderWidget = (widgetName?: string) => {
-    switch (widgetName) {
-      case 'manifesto-pledge':
-        return <SovereigntyPledge />;
       case 'mcp-agent-simulator':
         return <McpTerminal />;
+      // Future widgets go here:
+      // case 'local-compute-benchmark': return <NpuBenchmark />;
+      // case 'telemetry-audit-cta': return <TelemetryAudit />;
       default:
         return null;
     }
@@ -88,9 +78,9 @@ export default async function BlogPost({ params }: Props) {
           </h1>
         </header>
 
-        {/* The 'prose' tags apply structural typography rules globally */}
+        {/* The 'prose' tags apply structural typography rules globally. prose-quotes:none removes the default blockquote marks. */}
         <div 
-          className="prose prose-invert max-w-none prose-headings:text-white prose-headings:font-semibold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:leading-relaxed prose-p:mb-6 prose-strong:text-white prose-a:text-amber-500 hover:prose-a:underline"
+          className="prose prose-invert prose-quotes:none max-w-none prose-headings:text-white prose-headings:font-semibold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:leading-relaxed prose-p:mb-6 prose-strong:text-white prose-a:text-amber-500 hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }} 
         />
 
