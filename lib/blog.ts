@@ -12,6 +12,7 @@ export interface PostData {
   date: string;
   description: string;
   contentHtml: string;
+  widget?: string; 
 }
 
 // Get all posts formatted for the blog roll list view
@@ -53,6 +54,7 @@ export async function getPostData(slug: string): Promise<PostData | null> {
   return {
     slug,
     contentHtml,
+    widget: matterResult.data.widget || null, // Explicitly extract the widget
     title: matterResult.data.title,
     date: matterResult.data.date,
     description: matterResult.data.description,
