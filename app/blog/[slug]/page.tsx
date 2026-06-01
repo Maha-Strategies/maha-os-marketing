@@ -20,6 +20,14 @@ const McpTerminal = dynamic(() => import('@/components/widgets/McpTerminal'), {
     )
 });
 
+const NpuBenchmark = dynamic(() => import('@/components/widgets/NpuBenchmark'), {
+    loading: () => (
+      <div className="p-6 border border-stone-800 bg-[#121212] rounded-lg animate-pulse h-64 mt-12 flex items-center justify-center">
+        <span className="text-stone-600 font-mono text-sm">Loading NPU Simulator...</span>
+      </div>
+    )
+});
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -60,9 +68,8 @@ export default async function BlogPost({ params }: Props) {
         return <SovereigntyPledge />;
       case 'mcp-agent-simulator':
         return <McpTerminal />;
-      // Future widgets go here:
-      // case 'local-compute-benchmark': return <NpuBenchmark />;
-      // case 'telemetry-audit-cta': return <TelemetryAudit />;
+      case 'local-compute-benchmark':
+        return <NpuBenchmark />;
       default:
         return null;
     }
