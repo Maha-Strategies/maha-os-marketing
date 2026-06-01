@@ -12,6 +12,14 @@ const SovereigntyPledge = dynamic(() => import('../../../components/widgets/Sove
   )
 });
 
+const McpTerminal = dynamic(() => import('@/components/widgets/McpTerminal'), {
+    loading: () => (
+      <div className="p-6 border border-stone-800 bg-[#121212] rounded-lg animate-pulse h-64 mt-12 flex items-center justify-center">
+        <span className="text-stone-600 font-mono text-sm">Initializing MCP Sandbox...</span>
+      </div>
+    )
+});
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -54,6 +62,17 @@ export default async function BlogPost({ params }: Props) {
       // case 'local-compute-benchmark': return <NpuBenchmark />;
       // case 'mcp-agent-simulator': return <McpTerminal />;
       // case 'telemetry-audit-cta': return <TelemetryAudit />;
+      default:
+        return null;
+    }
+  };
+
+  const renderWidget = (widgetName?: string) => {
+    switch (widgetName) {
+      case 'manifesto-pledge':
+        return <SovereigntyPledge />;
+      case 'mcp-agent-simulator':
+        return <McpTerminal />;
       default:
         return null;
     }
