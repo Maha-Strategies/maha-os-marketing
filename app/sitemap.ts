@@ -1,38 +1,36 @@
 import { MetadataRoute } from 'next'
 
-// Use ONE canonical host everywhere. The live site resolves to www, so this
-// uses www — make sure your canonical tag and any redirects agree, and that
-// the non-www host 301-redirects here.
+// Single canonical host everywhere. Must match the page canonical tag,
+// the robots sitemap URL, and a 301 redirect from the non-www host.
 const baseUrl = 'https://www.maha-os.com'
 
-// ---------------------------------------------------------------------------
-// OPTION A (preferred): generate blog entries dynamically from your data source
-// so new posts appear in the sitemap automatically. Replace the body of
-// getBlogPosts() with a real fetch from your CMS / Supabase. It should return
-// one object per post with a URL slug and a last-modified date.
+// Blog posts. Dates reflect the published date shown on each article where
+// known; others default to the most recent known publish date. Update the
+// `lastModified` values when you materially revise a post.
 //
-// Example (Supabase):
-//   import { supabase } from '@/lib/supabase'
-//   const { data } = await supabase
-//     .from('posts')
-//     .select('slug, updated_at')
-//     .eq('published', true)
-//   return (data ?? []).map(p => ({ slug: p.slug, lastModified: new Date(p.updated_at) }))
-// ---------------------------------------------------------------------------
-async function getBlogPosts(): Promise<{ slug: string; lastModified: Date }[]> {
-  // TODO: replace with a real fetch. Until then, fill OPTION B below by hand.
-  return []
-}
-
-// OPTION B (fallback): if you are not fetching dynamically, list real slugs here.
-// Delete this once getBlogPosts() is wired up.
-const MANUAL_BLOG_SLUGS: string[] = [
-  // 'the-hateful-eight-seed-oils',
-  // 'circadian-alignment-protocol',
-  // 'zero-telemetry-architecture',
+// Better long-term: replace this array by fetching slugs + updated_at from
+// your CMS/Supabase so new posts appear automatically (see commented example).
+const blogPosts: { slug: string; lastModified: string }[] = [
+  { slug: 'local-ai-vs-cloud-biometrics', lastModified: '2026-05-31' },
+  { slug: 'cloud-health-telemetry-risks', lastModified: '2026-05-31' },
+  { slug: 'biological-digital-sovereignty-defined', lastModified: '2026-05-31' },
+  { slug: 'optimize-metabolism-software', lastModified: '2026-06-02' },
+  { slug: 'cognitive-scanner', lastModified: '2026-06-02' },
+  { slug: 'health-wellness-ai-ecosystem-alternatives', lastModified: '2026-06-02' },
+  { slug: 'agentic-health-system', lastModified: '2026-06-02' },
+  { slug: 'best-personalized-health-wellness-ai-ecosystem', lastModified: '2026-06-02' },
+  { slug: 'voice-stress-reset-app-alternative', lastModified: '2026-06-02' },
+  { slug: 'enterprise-health-platform-alternatives', lastModified: '2026-06-02' },
+  { slug: 'zero-payload-biometric-tracking', lastModified: '2026-06-02' },
 ]
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+// Example dynamic version (Supabase):
+//   import { supabase } from '@/lib/supabase'
+//   const { data } = await supabase
+//     .from('posts').select('slug, updated_at').eq('published', true)
+//   const blogPosts = (data ?? []).map(p => ({ slug: p.slug, lastModified: p.updated_at }))
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -48,22 +46,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  const dynamicPosts = await getBlogPosts()
-
-  const blogRoutes: MetadataRoute.Sitemap =
-    dynamicPosts.length > 0
-      ? dynamicPosts.map((post) => ({
-          url: `${baseUrl}/blog/${post.slug}`,
-          lastModified: post.lastModified,
-          changeFrequency: 'monthly',
-          priority: 0.7,
-        }))
-      : MANUAL_BLOG_SLUGS.map((slug) => ({
-          url: `${baseUrl}/blog/${slug}`,
-          lastModified: new Date(),
-          changeFrequency: 'monthly',
-          priority: 0.7,
-        }))
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.lastModified),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
 
   return [...staticRoutes, ...blogRoutes]
 }
