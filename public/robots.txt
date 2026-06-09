@@ -1,0 +1,54 @@
+# robots.txt for https://www.maha-os.com
+
+# Default: allow everything
+User-agent: *
+Allow: /
+
+# --- AI / LLM crawlers ---
+# These are allowed so assistants can discover and accurately describe Maha OS.
+# Set any of these to "Disallow: /" if you later decide to opt a bot out.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Content-Signal directive (emerging convention).
+# Adjust to your preference:
+#   search=yes   -> allow use in search / answer features
+#   ai-input=yes -> allow use as input to live AI answers (grounding)
+#   ai-train=no  -> disallow use for model training
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://www.maha-os.com/sitemap.xml
