@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { Shield, Target, EyeOff, RefreshCw, Smartphone } from 'lucide-react';
-import WaitlistForm from '../components/WaitlistForm';
 
 // Single canonical host used everywhere. Must match the sitemap, the robots
 // sitemap URL, and a 301 redirect from the non-www host.
@@ -40,13 +39,20 @@ export default function MahaOSLandingPage() {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Maha OS',
-    operatingSystem: 'ANDROID',
+    operatingSystem: 'ANDROID, IOS',
     applicationCategory: 'HealthApplication',
     description:
       'A privacy-first health app that scans products to flag industrial seed oils and additives, guides circadian-alignment routines, and keeps all biological data encrypted on-device.',
     url: SITE_URL,
-    installUrl: 'https://play.google.com/store/apps/details?id=com.maha.os',
-    downloadUrl: 'https://play.google.com/store/apps/details?id=com.maha.os',
+    installUrl: [
+      'https://play.google.com/store/apps/details?id=com.maha.os',
+      'https://apps.apple.com/us/app/maha-os/id6778333838',
+    ],
+    downloadUrl: [
+      'https://play.google.com/store/apps/details?id=com.maha.os',
+      'https://apps.apple.com/us/app/maha-os/id6778333838',
+    ],
+    sameAs: ['https://apps.apple.com/us/app/maha-os/id6778333838'],
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -99,7 +105,7 @@ export default function MahaOSLandingPage() {
         name: 'What platforms is Maha OS available on?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Maha OS is available now for Android on Google Play. An iOS version is in development; you can join the waitlist to be notified at launch.',
+          text: 'Maha OS is available for Android on Google Play and for iPhone on the Apple App Store.',
         },
       },
     ],
@@ -155,11 +161,16 @@ export default function MahaOSLandingPage() {
               Download for Android
             </a>
 
-            {/* iOS Vanguard Protocol */}
-            <div className="border-t border-zinc-800/50 pt-6">
-              <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest mb-4">iOS Architecture Pending // Join Vanguard</p>
-              <WaitlistForm />
-            </div>
+            {/* Live iOS Node */}
+            <a
+              href="https://apps.apple.com/us/app/maha-os/id6778333838"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 w-full border border-[#E6C687] text-[#E6C687] font-bold text-sm tracking-widest uppercase py-4 px-8 hover:bg-[#E6C687] hover:text-black transition-colors"
+            >
+              <Smartphone className="w-5 h-5" />
+              Download for iPhone
+            </a>
           </div>
         </div>
       </section>

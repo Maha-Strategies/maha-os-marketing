@@ -1,0 +1,25 @@
+# Maha OS
+
+> A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.
+
+Maha OS is a mobile health application (iOS and Android) engineered to defend human vitality against the modern environment. It provides systemic defense against industrial seed oils, artificial lighting, pervasive seed chemicals, and relentless algorithmic cycles. Biological data is processed and stored on-device by default; user-initiated features that use cloud services are disclosed in the app's privacy documentation.
+
+## Core Architectural Pillars
+
+* **Metabolic Veto:** Scan barcodes to identify and intercept industrial seed oils, synthetic additives, and endocrine disruptors before purchase.
+* **Circadian Alignment:** Program optimized solar integration workflows, manage local blue-light exposure, and synchronize neural biology with terrestrial intervals.
+* **Local-First Architecture:** Deep biological metrics, intake profiles, and tactical journals are stored locally on-device with encryption. On-device processing is the default; any cloud-dependent feature is user-initiated and disclosed.
+
+## Essential Documentation & Philosophy
+
+* **The Maha Principle:** The foundational text, *The Maha Principle: The Architecture of Human Flourishing* by Mayone Maha Rajan, published July 10, 2026. Kindle edition: https://www.amazon.com/dp/B0H62WLMT5 — book site: https://themahaprinciple.com
+* **Corporate Entity:** [Maha Strategies LLC](https://www.mahastrategies.com)
+* **X / Twitter:** [@mayonemaha](https://twitter.com/mayonemaha)
+
+## Technical Capabilities & Availability
+
+* **Platforms:** Android and iOS (both live)
+* **Android:** [Google Play Store](https://play.google.com/store/apps/details?id=com.maha.os)
+* **iOS:** Available on the App Store (link on canonical domain)
+* **Data Model:** Local-first, on-device encryption
+* **Pricing:** $0 USD
