@@ -8,24 +8,24 @@ const SITE_URL = 'https://www.maha-os.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Maha OS | Sovereign Ecosystem',
+  title: 'Maha OS | Private Health Routines and Food Scanner',
   description:
-    'Take back control of your health. A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.',
+    'A privacy-first mobile app for scanning product labels, maintaining health routines, and keeping personal data on your device.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: SITE_URL,
     siteName: 'Maha OS',
-    title: 'Maha OS | Sovereign Ecosystem',
+    title: 'Maha OS | Private Health Routines and Food Scanner',
     description:
-      'A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.',
+      'Scan product labels, maintain health routines, and keep personal data on your device.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Maha OS — Sovereign Ecosystem' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Maha OS | Sovereign Ecosystem',
+    title: 'Maha OS | Private Health Routines and Food Scanner',
     description:
-      'A privacy-first ecosystem to eliminate toxins, optimize your metabolism, and protect your cognitive baseline.',
+      'Scan product labels, maintain health routines, and keep personal data on your device.',
     images: ['/og-image.jpg'],
     creator: '@mayonemaha',
   },
@@ -42,7 +42,7 @@ export default function MahaOSLandingPage() {
     operatingSystem: 'ANDROID, IOS',
     applicationCategory: 'HealthApplication',
     description:
-      'A privacy-first health app that scans products to flag industrial seed oils and additives, guides circadian-alignment routines, and keeps all biological data encrypted on-device.',
+      'A privacy-first mobile app for scanning product labels, maintaining health routines, and keeping personal data on your device.',
     url: SITE_URL,
     installUrl: [
       'https://play.google.com/store/apps/details?id=com.maha.os',
@@ -89,7 +89,7 @@ export default function MahaOSLandingPage() {
         name: 'What is Maha OS?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Maha OS is a privacy-first Android health app that helps you identify and avoid industrial seed oils and additives, build circadian-alignment routines, and track biological metrics that stay encrypted on your device.',
+          text: 'Maha OS is a privacy-first mobile app for scanning product labels, maintaining health routines, and keeping personal data on your device.',
         },
       },
       {
@@ -97,7 +97,7 @@ export default function MahaOSLandingPage() {
         name: 'Is my data private?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Biological metrics, intake profiles, and journals are stored locally on-device with end-to-end encryption. The app is built so this data is not sent to the cloud.',
+          text: 'Maha OS is designed to keep personal health information on your device rather than sell it to advertising networks. Review the in-app privacy information for the current technical details and permissions.',
         },
       },
       {
@@ -141,12 +141,12 @@ export default function MahaOSLandingPage() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extralight tracking-tighter text-white uppercase leading-none">
-            Your Biology <br />
-            <span className="font-mono text-xl sm:text-3xl tracking-widest text-zinc-500 block mt-4">Is Being Extracted</span>
+            Build a Health Routine <br />
+            <span className="font-mono text-xl sm:text-3xl tracking-widest text-zinc-500 block mt-4">That Stays Yours</span>
           </h1>
 
           <p className="max-w-xl mx-auto text-sm sm:text-base text-stone-400 font-light tracking-wide leading-relaxed">
-            The modern environment is systematically weaponized against human vitality. Industrial seed oils, artificial lighting, pervasive seed chemicals, and relentless algorithmic cycles hijack your metabolic efficiency and erode your focus. Maha OS is your perimeter defense.
+            Scan product labels, maintain daily routines, and keep your personal health information on your device. Maha OS is a private companion for deliberate everyday choices, not medical advice.
           </p>
 
           <div className="pt-8 max-w-md mx-auto space-y-6">
@@ -215,13 +215,31 @@ export default function MahaOSLandingPage() {
         </div>
       </section>
 
+      <section className="border-y border-zinc-900 bg-black/30 py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="font-mono text-[10px] tracking-[0.24em] uppercase text-[#E6C687]">The framework behind the protocol</p>
+          <h2 className="mt-4 text-3xl sm:text-4xl font-light tracking-tight text-white">Built from <span className="italic">The Maha Principle</span></h2>
+          <p className="mt-5 text-sm leading-relaxed text-stone-400 max-w-2xl mx-auto">
+            Read the ideas behind the practice, then use Maha OS to make the routines your own. The book and the app are companions: one offers the framework; the other supports daily action.
+          </p>
+          <a
+            href="https://themahaprinciple.com/?utm_source=maha-os.com&utm_medium=referral&utm_campaign=app_to_book"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex mt-8 border border-[#E6C687] px-6 py-3 text-xs font-bold tracking-widest uppercase text-[#E6C687] transition-colors hover:bg-[#E6C687] hover:text-black"
+          >
+            Explore The Maha Principle
+          </a>
+        </div>
+      </section>
+
       {/* Footer System Node with SEO Cross-Linking */}
       <footer className="border-t border-zinc-900 py-12 bg-black/40">
         <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 font-mono text-[10px] text-zinc-600 uppercase tracking-widest">
           <div className="flex gap-4">
             <a href="https://www.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#E6C687] transition-colors">Corporate Strategy</a>
             <span>//</span>
-            <a href="https://publish.mahastrategies.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#E6C687] transition-colors">The Maha Principle</a>
+            <a href="https://themahaprinciple.com/?utm_source=maha-os.com&utm_medium=referral&utm_campaign=app_to_book" target="_blank" rel="noopener noreferrer" className="hover:text-[#E6C687] transition-colors">The Maha Principle</a>
           </div>
           <div>© 2026 MAHA STRATEGIES LLC. SOVEREIGN SECTOR SECURED.</div>
         </div>

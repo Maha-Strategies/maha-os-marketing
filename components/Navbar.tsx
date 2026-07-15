@@ -23,7 +23,7 @@ export default function Navbar() {
 
           {/* Action Optimization Target */}
           <a 
-            href="https://play.google.com" 
+            href="https://play.google.com/store/apps/details?id=com.maha.os"
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-[#D4AF37] text-black px-4 py-1.5 rounded text-xs font-semibold uppercase tracking-widest hover:bg-[#B7410E] hover:text-white transition-all duration-300"

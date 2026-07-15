@@ -2,6 +2,9 @@
 import { getPostData, getSortedPostsData } from '../../../lib/blog';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
+
+const SITE_URL = 'https://www.maha-os.com';
 
 // Dynamically import widgets to ensure they are only client-loaded when requested by the frontmatter
 const SovereigntyPledge = dynamic(() => import('@/components/widgets/SovereigntyPledge'), {
@@ -33,15 +36,24 @@ interface Props {
 }
 
 // Next.js Search Engine Optimization Injection
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostData(slug);
   
   if (!post) return { title: 'Article Not Found' };
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: `${post.title} | Maha OS Blog`,
     description: post.description,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: 'article',
+      url: `${SITE_URL}/blog/${post.slug}`,
+      siteName: 'Maha OS',
+      title: post.title,
+      description: post.description,
+    },
   };
 }
 
