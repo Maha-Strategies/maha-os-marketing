@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { federationSitemapRows } from '@/lib/federation-adapter'
 
 // Single canonical host everywhere. Must match the page canonical tag,
 // the robots sitemap URL, and a 301 redirect from the non-www host.
@@ -53,5 +54,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticRoutes, ...blogRoutes]
+  return [...staticRoutes, ...blogRoutes, ...federationSitemapRows()]
 }
